@@ -29,8 +29,8 @@ private:				//Buttons und Funktionen werden angelegt
     QPushButton *buttonVorzeichen;
     QPushButton *buttonProzentInDez;
 
-    
-    
+
+
     void button0_clicked();
     void button1_clicked();
     void button2_clicked();
@@ -71,52 +71,71 @@ MainWindow::MainWindow()
 
 
     //Button erstellen
-    button1 = new QPushButton("1", this);
-    button2 = new QPushButton("2", this);
-    button3 = new QPushButton("3", this);
-    button4 = new QPushButton("4", this);
-    button5 = new QPushButton("5", this);
-    button6 = new QPushButton("6", this);
-    button7 = new QPushButton("7", this);
-    button8 = new QPushButton("8", this);
-    button9 = new QPushButton("9", this);
-    button0 = new QPushButton("0", this);
-    buttonAddieren = new QPushButton("+", this);
-    buttonSubtrahieren = new QPushButton("-", this);
-    buttonMultiplizieren = new QPushButton("*", this);
-    buttonDividieren = new QPushButton("/", this);
-    buttonErgebnis = new QPushButton("=",this);
-    buttonKomma = new QPushButton(",",this);
-    buttonLoschen = new QPushButton("AC",this);
-    buttonVorzeichen = new QPushButton("Vorzeichen", this);
-    buttonProzentInDez = new QPushButton("%", this);
+    QPushButton *button1 = new QPushButton();
+    button1->setText("1");
+    QPushButton *button2 = new QPushButton();
+    button2->setText("2");
+    QPushButton *button3 = new QPushButton();
+    button3->setText("3");
+    QPushButton *button4 = new QPushButton();
+    button4->setText("4");
+    QPushButton *button5 = new QPushButton();
+    button5->setText("5");
+    QPushButton *button6 = new QPushButton();
+    button6->setText("6");
+    QPushButton *button7 = new QPushButton();
+    button7->setText("7");
+    QPushButton *button8 = new QPushButton();
+    button8->setText("8");
+    QPushButton *button9 = new QPushButton();
+    button9->setText("9");
+    QPushButton *button0 = new QPushButton();
+    button0->setText("0");
+    QPushButton *buttonAddieren = new QPushButton();
+    buttonAddieren->setText("+");
+    QPushButton *buttonSubtrahieren = new QPushButton();
+    buttonSubtrahieren->setText("-");
+    QPushButton *buttonMultiplizieren = new QPushButton();
+    buttonMultiplizieren->setText("*");
+    QPushButton *buttonDividieren = new QPushButton();
+    buttonDividieren->setText("/");
+    QPushButton *buttonErgebnis = new QPushButton();
+    buttonErgebnis->setText("=");
+    QPushButton *buttonKomma = new QPushButton();
+    buttonKomma->setText(",");
+    QPushButton *buttonLoschen = new QPushButton();
+    buttonLoschen->setText("AC");
+    QPushButton *buttonVorzeichen = new QPushButton();
+    buttonVorzeichen->setText("neg. Sign");
+    QPushButton *buttonProzentInDez = new QPushButton();
+    buttonProzentInDez->setText("%");
 
-    //grid 
-    layout = new QGridLayout(this);
-    layout->addWidget(display, 0, 0, 1, 4);
-    layout->addWidget(buttonLoschen, 1, 0);
-    layout->addWidget(buttonVorzeichen, 1, 1);
-    layout->addWidget(buttonProzentInDez, 1, 2);
-    layout->addWidget(buttonDividieren, 1, 3);
-    layout->addWidget(button7, 2, 0);
-    layout->addWidget(button8, 2, 1);
-    layout->addWidget(button9, 2, 2);
-    layout->addWidget(buttonMultiplizieren, 2, 3);
-    layout->addWidget(button4, 3, 0);
-    layout->addWidget(button5, 3, 1);
-    layout->addWidget(button6, 3, 2);
-    layout->addWidget(buttonSubtrahieren, 3, 3);
-    layout->addWidget(button1, 4, 0);
-    layout->addWidget(button2, 4, 1);
-    layout->addWidget(button3, 4, 2);
-    layout->addWidget(buttonAddieren, 4, 3);
-    layout->addWidget(button0, 5, 0);
-    layout->addWidget(buttonKomma, 5, 2);
-    layout->addWidget(buttonErgebnis, 5, 3);
+    //grid
+    QGridLayout *grid = new QGridLayout(this);
+    grid->addWidget(display, 0, 0, 1, 4);
+    grid->addWidget(buttonLoschen, 1, 0);
+    grid->addWidget(buttonVorzeichen, 1, 1);
+    grid->addWidget(buttonProzentInDez, 1, 2);
+    grid->addWidget(buttonDividieren, 1, 3);
+    grid->addWidget(button7, 2, 0);
+    grid->addWidget(button8, 2, 1);
+    grid->addWidget(button9, 2, 2);
+    grid->addWidget(buttonMultiplizieren, 2, 3);
+    grid->addWidget(button4, 3, 0);
+    grid->addWidget(button5, 3, 1);
+    grid->addWidget(button6, 3, 2);
+    grid->addWidget(buttonSubtrahieren, 3, 3);
+    grid->addWidget(button1, 4, 0);
+    grid->addWidget(button2, 4, 1);
+    grid->addWidget(button3, 4, 2);
+    grid->addWidget(buttonAddieren, 4, 3);
+    grid->addWidget(button0, 5, 0);
+    grid->addWidget(buttonKomma, 5, 2);
+    grid->addWidget(buttonErgebnis, 5, 3);
 
-    setLayout(layout);
+    setLayout(grid);
 
-	//Funktionen mit jeweiligen Button verbinden
+    //Funktionen mit jeweiligen Button verbinden
     connect(button0, &QPushButton::clicked, this, &MainWindow::button0_clicked);
     connect(button1, &QPushButton::clicked, this, &MainWindow::button1_clicked);
     connect(button2, &QPushButton::clicked, this, &MainWindow::button2_clicked);
@@ -259,17 +278,17 @@ void MainWindow::buttonDividieren_clicked()
 
 void MainWindow::buttonKomma_clicked()
 {
-	    if(!display->text().contains(","))
-		        {
-				        display->insert(",");
-					    }
+    if(!display->text().contains(","))
+    {
+        display->insert(",");
+    }
 }
 
 void MainWindow::buttonVorzeichen_clicked()
 {
-    if(display->text() == "0")
-    {
-        display->clear();
+    if(display->text() == "0");
+{
+    display->clear();
     }
     display->insert("-");
 }
