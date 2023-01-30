@@ -287,8 +287,8 @@ void MainWindow::buttonKomma_clicked()
 void MainWindow::buttonVorzeichen_clicked()
 {
     if(display->text() == "0");
-{
-    display->clear();
+    {
+        display->clear();
     }
     display->insert("-");
 }
