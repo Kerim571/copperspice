@@ -1,0 +1,7 @@
+/home/skywalker57/copperspice/build/CMakeFiles/install/strip.dir
+/home/skywalker57/copperspice/build/CMakeFiles/install/local.dir
+/home/skywalker57/copperspice/build/CMakeFiles/install.dir
+/home/skywalker57/copperspice/build/CMakeFiles/list_install_components.dir
+/home/skywalker57/copperspice/build/CMakeFiles/rebuild_cache.dir
+/home/skywalker57/copperspice/build/CMakeFiles/edit_cache.dir
+/home/skywalker57/copperspice/build/CMakeFiles/Rechner.dir

@@ -11,4 +11,4 @@ ninja install
 
 cd ..
 
-./deploy/calculator
+./deploy/Rechner

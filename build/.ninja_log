@@ -1,0 +1,10 @@
+# ninja log v5
+0	5754	1675042616151052317	CMakeFiles/Rechner.dir/main.cpp.o	f52fbfa37fbef572
+5755	6209	1675042616611052312	bin/Rechner	c3f44d3116543d42
+6209	6295	0	CMakeFiles/install.util	1801bd67dd0baaf3
+1	5776	1675042749991050997	CMakeFiles/Rechner.dir/main.cpp.o	f52fbfa37fbef572
+5776	6226	1675042750441050993	bin/Rechner	c3f44d3116543d42
+6226	6306	0	CMakeFiles/install.util	1801bd67dd0baaf3
+1	5830	1675043765531040984	CMakeFiles/Rechner.dir/main.cpp.o	f52fbfa37fbef572
+5830	6295	1675043766011040979	bin/Rechner	c3f44d3116543d42
+6295	6374	0	CMakeFiles/install.util	1801bd67dd0baaf3

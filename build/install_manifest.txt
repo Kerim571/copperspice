@@ -1,0 +1,5 @@
+/home/skywalker57/copperspice/deploy/./Rechner
+/home/skywalker57/copperspice/deploy/./libCsCore1.7.so
+/home/skywalker57/copperspice/deploy/./libCsGui1.7.so
+/home/skywalker57/copperspice/deploy/./platforms/CsGuiXcb1.7.so
+/home/skywalker57/copperspice/deploy/./libCsXcbSupport1.7.so

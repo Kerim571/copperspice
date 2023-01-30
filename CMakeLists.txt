@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(taschenrechner)
+project(Rechner)
 
 include(CheckCXXCompilerFlag)
 include(CheckCXXSourceCompiles)
