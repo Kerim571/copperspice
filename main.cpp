@@ -5,8 +5,6 @@
 class MainWindow : public QWidget	//Klasse MainWindow kriegt QWidget von Public vererbt
 {
 private:				//Buttons und Funktionen werden angelegt
-
-
     QLineEdit *display;
     QGridLayout *layout;
     QPushButton *button0;
@@ -28,8 +26,7 @@ private:				//Buttons und Funktionen werden angelegt
     QPushButton *buttonLoschen;
     QPushButton *buttonVorzeichen;
     QPushButton *buttonProzentInDez;
-
-
+   
 
     void button0_clicked();
     void button1_clicked();
@@ -106,7 +103,7 @@ MainWindow::MainWindow()
     QPushButton *buttonLoschen = new QPushButton();
     buttonLoschen->setText("AC");
     QPushButton *buttonVorzeichen = new QPushButton();
-    buttonVorzeichen->setText("neg. Sign");
+    buttonVorzeichen->setText("+/-");
     QPushButton *buttonProzentInDez = new QPushButton();
     buttonProzentInDez->setText("%");
 
@@ -286,11 +283,13 @@ void MainWindow::buttonKomma_clicked()
 
 void MainWindow::buttonVorzeichen_clicked()
 {
-    if(display->text() == "0");
+    if(display->text() != "0");
     {
-        display->clear();
+        double zahl = 0.0;
+	zahl = display->text().toDouble();
+	zahl = zahl*(-1);
+	display->setText(QString::number(zahl));
     }
-    display->insert("-");
 }
 
 void MainWindow::buttonProzentInDez_clicked()
